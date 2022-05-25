@@ -1,0 +1,33 @@
+<head>
+    <title>
+        Allcontacts
+    </title>
+</head>
+<body body style="background-color:lightskyblue; text-align: center;">
+<div style="border:solid darkred; margin-top:150px; width:50%; height:50%; display: inline-block; background-color:darkturquoise;">
+<h2 align="center" ><u>All Contacts</u></h2>
+<table border="6" align="center" cellspacing="5" cellpadding="5" >
+    <tr>
+    <th align="center" bgcolor="coral">ID</th>
+    <th align="center" bgcolor="coral">FIRST NAME</th>
+    <th align="center" bgcolor="coral">LAST NAME</th>
+    <th align="center" bgcolor="coral">EMAIL-ID</th>
+    <th align="center" bgcolor="coral">PHONE NO.</th>
+    <th align="center" bgcolor="coral"> ACTION</th>
+    </tr>
+{% for i in data %}
+<tr>
+    <td align="center" bgcolor="darkgrey">{{i[0]}}</td>
+    <td align="center" bgcolor="darkgrey">{{i[1]}}</td>
+    <td align="center" bgcolor="darkgrey">{{i[2]}}</td>
+    <td align="center" bgcolor="darkgrey">{{i[3]}}</td>
+    <td align="center" bgcolor="darkgrey">{{i[4]}}</td>
+    <td align="center" bgcolor="darkgrey"> <a href="/editlink/{{i[0]}}">edit</a>
+        <a href="/deletelink/{{i[0]}}">delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+<a href="/">back</a>
+</div>
+</body>
